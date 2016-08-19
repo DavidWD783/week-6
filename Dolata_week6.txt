@@ -1,0 +1,14 @@
+1. What are classes?
+  - Classes in Ruby are objects that can be created (or are already inherent in Ruby to be called upon) that define methods, i.e. the behavior of instances in that class, that are used to alter the state of variables (also includes arrays, hashes) run in a program using that class.
+  - The class 'Class' is the umbrella object, whereas the instance of the class inherits all of the methods (behaviors) and creates instance variables and instance methods for the particular instance that is being created.  The instance methods are created inside the class and can either alter the state of the variables inside the class (instance variables) or can choose not to alter their state.
+
+  2. Attributes in classes
+  - Attributes in classes in Ruby are the features that the class defines to be altered or not throughout the instance methods in the class.  Attributes of a class could be things like taking the 'name' of a person, their 'age', their 'height', etc...  The methods created in the class act upon its attributes, changing them or not.
+
+  3. An object that may be a class with attributes in Ruby could be a book creation class.  The attributes would be the 'title', 'cover_material', 'pages', 'font', 'language'.  The methods in the class may be things that alter each attribute (each new book has a new title, a different cover_material and size, a different number of pages, etc...).
+
+  4. The initialize method lets the user know that a new instance of the class has been created, thus the methods in the class can be used with the instance as instance methods.  The initialize method runs when the class is called on and all arguments needed to initialize a new class are met.  Ex: class_type = Class.new("name", "age") would initialize a new class of Class called 'class_type' only if the user's name and age are passed in.  The initialize method runs upon declaring a new instance of the class.
+
+  5. Modules in Ruby can be created or inherently called upon and they contain widely used methods that can be called without having to declare a class to house them.  By 'requiring' the module in advance, the methods in the module can be used on variables inside any new class or method.  Modules are useful in that they are not affected by the behaviors of other methods and variables around them.
+
+  6. Some ways a module can be used are to help prevent name copies with other methods and allow the user to mix them in to their code in many places by using method syntax on the modules methods.  Modules get rid of the need for multiple inheritance with the mixin property.  When the module is 'included' in a class, all of the modules methods are available as instance methods in that class.
